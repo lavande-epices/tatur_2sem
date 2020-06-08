@@ -2,10 +2,11 @@ public class Time {
     int hour;
     int minute;
 
-    Time() {
+    Time(int hour, int minute) {
         this.hour = hour;
         this.minute = minute;
     }
+
 
     void show() {
         System.out.println("Сейчас " + this.hour + ":" + this.minute);
