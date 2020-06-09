@@ -14,13 +14,6 @@ public class Drawing {
                  c[i][j] = l;
              }
          }
-
-         for (int i = 0; i < a; i++) {
-             for (int j = 0; j < b; j++) {
-                 System.out.print(" " + c[i][j] + " ");
-             }
-             System.out.println();
-         }
      }
 
     void setPoint(int m, int r, char p){
@@ -32,13 +25,6 @@ public class Drawing {
                 }
                 else c[i][j] = l;
             }
-        }
-
-        for (int i = 0; i < a; i++) {
-            for (int j = 0; j < b; j++) {
-                System.out.print(c[i][j] + "  ");
-            }
-            System.out.println();
         }
     }
     int q1; //столбец
