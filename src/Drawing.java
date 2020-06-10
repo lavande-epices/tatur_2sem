@@ -76,42 +76,6 @@ public class Drawing {
     void Circle(int t1, int t2, int radius){
         // a - столбец, b - строка.
         // идея: если точка не лежит в t1 столбце/ t2 строке, то проверяем по циклу, который строит прямоугольный треуг. с гип-й = radius
-        int k;
-        int lw;
-        if (t1 - radius <= 0){
-            k = 0;
-        }
-        else {
-            k = t1 - radius; //левая точка
-        }
-        if (t2 - radius <= 0){
-            lw = 0;
-        }
-        else {
-            lw = t2 - radius; //верхняя точка
-        }
-        //это четыре точки, с которыми мы будем строить треугольники.
-        char[][] c = new char[a][b];
-        for (int i = 0; i < a; i++) { //строка
-            for (int j = 0; j < b; j++) { //столбец
-                if(i < lw ||  j < k) {
-                    c[i][j] = l;
-                }
-                if(i >= lw && j >= k ) {
-                    c[i][j] = '!';
-                }
-                if (i == t1 && j == t2){
-                    c[i][j] = 'w';
-                }
-            }
-        }
-        System.out.print("--------тест на круг--------");
-        System.out.print('\n');
-        for (int i = 0; i < a; i++) {
-            for (int j = 0; j < b; j++) {
-                System.out.print(c[i][j] + " ");
-            }
-            System.out.println();
-        }
+
     }
 }
