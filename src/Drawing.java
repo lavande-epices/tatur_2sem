@@ -7,13 +7,14 @@ public class Drawing {
          this.b = b;
          this.l = l;
      }
-     void print() {
+     char[][] print() {
          char[][] c = new char[a][b];
          for (int i = 0; i < a; i++) {
              for (int j = 0; j < b; j++) {
                  c[i][j] = l;
              }
          }
+         return c;
      }
 
     void setPoint(int m, int r, char p){
@@ -30,19 +31,19 @@ public class Drawing {
     int q1; //столбец
     int q2; //начало
     int q3; //конец
-    void drawVerticalLine(int q1, int q2, int q3, char [][]c){ //q1 - столбец, q2 - начало, q3 - конец
+    void drawVerticalLine(int y, int x1, int x2, char [][]c){ //q1 - столбец, q2 - начало, q3 - конец
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < b; j++) {
-                if( i > q2 && i < q3 && j == q1){
+                if( i > x1 && i < x2 && j == y){
                     c[i][j] = '|';
                 }
             }
         }
     }
-    void drawHorizontalLine(int q1, int q2, int q3, char [][]c){ //q1 - строка, q2 - начало, q3 - конец
+    void drawHorizontalLine(int y, int x1, int x2, char [][]c){ //q1 - строка, q2 - начало, q3 - конец
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < b; j++) {
-                if( j > q2 && j < q3 && i == q1){
+                if( j > x1 && j < x2 && i == y){
                     c[i][j] = '_';
                 }
             }
@@ -65,31 +66,6 @@ public class Drawing {
             drawVerticalLine(q2, 0, b, c);
             drawVerticalLine(e2, 0, a, c);
             drawHorizontalLine(e1, 0, a, c);
-            int min_v;
-            int min_h;
-            int max_h;
-            int max_v;
-        if (q1 < e1){
-            min_h = q1;
-            max_h = e1;
-        } else {
-            min_h = e1;
-            max_h = q1;
-        }
-        if (q2 < e2){
-            min_v = q2;
-            max_v = e2;
-        } else {
-            min_v = e2;
-            max_v = q2;
-        }
-        for (int i = 0; i < a; i++) {
-          for (int j = 0; j < b; j++) {
-             if ( (j == q1 && i == q2) || (j == e1 && i == e2) ){
-               c[i][j] = l;
-              }
-            }
-        }
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < b; j++) {
                 System.out.print(c[i][j] + "  ");
