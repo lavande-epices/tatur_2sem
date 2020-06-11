@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IOTasks {          //опора на in.hasNextInt(); String  fn  = "input.txt";
+public class IOTasks {
     public static void main(String[] args) throws Exception {
         String [] a = new String[5];
         for (int i = 0; i < 5; i++){

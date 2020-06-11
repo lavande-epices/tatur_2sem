@@ -50,7 +50,6 @@ public class Rational {
         }
         return Euclidean_al(b, a%b);
     }
-
     static Rational sum(Rational r){
         int d1 = r.getD();
         int n1 = r.getN() + d1;

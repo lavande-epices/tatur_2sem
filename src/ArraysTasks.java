@@ -10,7 +10,7 @@ public class ArraysTasks {
         int n;
         System.out.println("Введите n: ");
         n = input.nextInt();
-        int[] a = new int[n]; //размер массива в приведенном примере зависит от n как у вас должно быть не знаю
+        int[] a = new int[n];
         System.out.println("Введите массив a: ");
         for (int i = 0; i < a.length; i++) {
             System.out.println("Введите " + i + "-ый компонет массива a");

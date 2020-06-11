@@ -73,7 +73,7 @@ public class Drawing {
             System.out.println();
         }
     }
-    void Circle(int t1, int t2, int radius){
+    void Circle(int x, int y, int radius){
         // a - столбец, b - строка.
         // идея: если точка не лежит в t1 столбце/ t2 строке, то проверяем по циклу, который строит прямоугольный треуг. с гип-й = radius
 
