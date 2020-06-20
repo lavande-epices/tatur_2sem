@@ -3,7 +3,6 @@ import java.io.IOException;
 public class TestFriday {
     public static void main(String[] args) throws IOException {
         Transliterator t = Transliterator.createICAO_DOC_9303();
-        t.translateFile("exam/a.txt", "exam/b.txt");
         System.out.println(t.translateOneSymbol('я')); // ia
         System.out.println(t.translateOneSymbol('$')); // $
         System.out.println(t.translate("экзамен")); // ekzamen
@@ -20,6 +19,7 @@ public class TestFriday {
         System.out.println(t.translate("Моё имя")); // Ilia
         System.out.println(t.translate("Яблоко")); // Iabloko
         System.out.println(t.translate("ПАРАШЮТ")); // PARAShIuT
+        t.translateFile("exam/a.txt", "exam/b.txt");
 
     }
 
