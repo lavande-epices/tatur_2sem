@@ -33,9 +33,8 @@ public class Transliterator {
     public String translate(String word) {
         String[] letters = word.split("");
         char[] letter = word.toCharArray();
-        for (int j = 0; j < letters.length; j++) {
+        for (int j = 0; j < letters.length; j++)
             word = word.replaceAll(letters[j], translateOneSymbol(letter[j]));
-        }
         return word;
     }
 
