@@ -43,10 +43,9 @@ public class Transliterator {
     void translateFile(String name1, String name2) throws IOException {
         String f = Files.readString(Paths.get(name1));
         String[] l = f.split(" ");
-        try {
-            PrintStream out = new PrintStream(name2, "utf8");
+        try(PrintStream out = new PrintStream(name2, "utf8")) {
             for (int i = 0; i < l.length; i++) {
-                out.print(translate(l[i]));
+                out.print(translate(l[i]) + " ");
             }
         } catch (IOException e) {
             e.printStackTrace();

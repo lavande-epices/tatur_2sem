@@ -11,7 +11,7 @@ public class IOTasks {
         Second(a,"end.txt");
     }
     public static void First() throws Exception{
-    BufferedReader reader = new BufferedReader(new FileReader("end.txt"));
+    BufferedReader reader = new BufferedReader(new FileReader("exam/a.txt"));
         String line;
         List<String> lines = new ArrayList<String>();
         while ((line = reader.readLine()) != null) {
