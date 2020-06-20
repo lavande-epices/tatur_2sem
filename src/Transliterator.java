@@ -10,8 +10,6 @@ public class Transliterator {
         String[] e = {"a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "i", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "ie", "y", "", "e", "iu", "ia"};
         return new Transliterator(r,e);
     }
-        //Символы первого массива должны превращаться в соответствующие
-        //цепочки символов второго массива.
     String translateOneSymbol(char symbol){
         String testing = String.valueOf(symbol).toLowerCase();
         for (int i = 0; i < r.length; i++) {
