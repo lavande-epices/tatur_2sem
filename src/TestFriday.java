@@ -1,11 +1,14 @@
+import java.io.IOException;
+
 public class TestFriday {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Transliterator t = Transliterator.createICAO_DOC_9303();
+        t.translateFile("exam/a.txt", "exam/b.txt");
         System.out.println(t.translateOneSymbol('я')); // ia
         System.out.println(t.translateOneSymbol('$')); // $
         System.out.println(t.translate("экзамен")); // ekzamen
         System.out.println(t.translate("моё имя")); // ilia
-        char [] nums = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        char[] nums = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         String[] texts = {"ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
         Transliterator n = new Transliterator(nums, texts);
         System.out.println(n.translateOneSymbol('$'));
@@ -17,6 +20,7 @@ public class TestFriday {
         System.out.println(t.translate("Моё имя")); // Ilia
         System.out.println(t.translate("Яблоко")); // Iabloko
         System.out.println(t.translate("ПАРАШЮТ")); // PARAShIuT
+
     }
 
 }
