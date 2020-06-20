@@ -3,9 +3,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Transliterator {
-    private char[] r;
-    private String[] e;
-    
+    private final char[] r;
+    private final String[] e;
+
     public Transliterator(char[] r, String[] e) {
         this.r = r;
         this.e = e;
