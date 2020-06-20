@@ -1,11 +1,15 @@
 public class Transliterator {
-    char[] r;
-    String[] e;
-        public Transliterator(char[] r, String[] e) {
-            this.r = r;
-            this.e = e;
-
-        }
+    private char[] r;
+    private String[] e;
+    Transliterator (char[] r, String[] e){
+        this.r = r;
+        this.e = e;
+    }
+    static Transliterator createICAO_DOC_9303() {
+        char[] r = {'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'};
+        String[] e = {"a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "i", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "ie", "y", "", "e", "iu", "ia"};
+        return new Transliterator(r,e);
+    }
         //Символы первого массива должны превращаться в соответствующие
         //цепочки символов второго массива.
     String translateOneSymbol(char symbol){
@@ -28,5 +32,4 @@ public class Transliterator {
         }
         return word;
     }
-
 }
